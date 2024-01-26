@@ -1106,6 +1106,7 @@ class TStepperIndicator : View, ViewPager.OnPageChangeListener {
         }
 
         companion object {
+            @JvmField
             val CREATOR: Parcelable.Creator<SavedState> = object : Parcelable.Creator<SavedState> {
                 override fun createFromParcel(`in`: Parcel): SavedState? {
                     return SavedState(`in`)
@@ -1138,11 +1139,15 @@ class TStepperIndicator : View, ViewPager.OnPageChangeListener {
                 val t = TypedValue()
                 context.theme.resolveAttribute(color, t, true)
                 color = t.data
-            } else
+            } else {
                 // If using native primaryColor (SDK >21)
                 val t = context.obtainStyledAttributes(intArrayOf(android.R.attr.colorPrimary))
-                color = t.getColor(0, ContextCompat.getColor(context, R.color.stpi_default_primary_color))
+                color = t.getColor(
+                    0,
+                    ContextCompat.getColor(context, R.color.stpi_default_primary_color)
+                )
                 t.recycle()
+            }
             return color
         }
 

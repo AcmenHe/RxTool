@@ -1,9 +1,6 @@
-include ':RxKit',
+include ':RxKit',':RxUI', ':RxCamera',':RxArcGisKit'
 //':RxDemo',
-        ':RxUI',
-        ':RxCamera',
 //        ':RxFeature',
 //        ':RxPay',
-        ':RxArcGisKit'
 rootProject.name='RxTool'
 
