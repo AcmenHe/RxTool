@@ -1138,16 +1138,11 @@ class TStepperIndicator : View, ViewPager.OnPageChangeListener {
                 val t = TypedValue()
                 context.theme.resolveAttribute(color, t, true)
                 color = t.data
-            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            } else
                 // If using native primaryColor (SDK >21)
                 val t = context.obtainStyledAttributes(intArrayOf(android.R.attr.colorPrimary))
                 color = t.getColor(0, ContextCompat.getColor(context, R.color.stpi_default_primary_color))
                 t.recycle()
-            } else {
-                val t = context.obtainStyledAttributes(intArrayOf(R.attr.colorPrimary))
-                color = t.getColor(0, ContextCompat.getColor(context, R.color.stpi_default_primary_color))
-                t.recycle()
-            }
             return color
         }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <color name="colorPrimary">#35B4FA</color>
     <color name="White">#FFFFFFFF</color><!-- 全白 -->
     <color name="White66">#66FFFFFF</color><!-- 透明白 66 -->
     <color name="whiteIvory">#FFFFF0</color><!-- 象牙色 -->
