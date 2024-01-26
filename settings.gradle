@@ -1,5 +1,5 @@
-include ':RxDemo',
-        ':RxKit',
+include ':RxKit',
+//':RxDemo',
         ':RxUI',
         ':RxCamera',
 //        ':RxFeature',
